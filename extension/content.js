@@ -1,4 +1,6 @@
 (function () {
+  const API_URL = "https://lingoreadme.onrender.com/api/translate";
+
   const injectButton = () => {
     // Check if context is still valid
     if (!chrome.runtime?.id) return;
@@ -45,17 +47,14 @@
         const data = await chrome.storage.local.get(["targetLang"]);
         const locale = data.targetLang || "es-ES";
 
-        const apiResponse = await fetch(
-          "https://lingoreadme.onrender.com/api/translate",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              markdown: markdownText,
-              targetLocale: locale,
-            }),
-          },
-        );
+        const apiResponse = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            markdown: markdownText,
+            targetLocale: locale,
+          }),
+        });
 
         if (!apiResponse.ok) {
           const errorMsg = await apiResponse.json();
