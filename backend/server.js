@@ -7,7 +7,12 @@ import pLimit from "p-limit";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "chrome-extension://bnljbpkpiagehcllnakdkaljokbnpjka", 
+    "https://github.com"
+  ]
+})));
 app.use(express.json({ limit: "10mb" }));
 
 const lingoDotDev = new LingoDotDevEngine({

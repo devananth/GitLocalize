@@ -69,6 +69,7 @@
           const html = marked.parse(result.translatedMarkdown);
           document.querySelector(".markdown-body").innerHTML = html;
           btn.innerText = "✅ Translated";
+          btn.disabled = true;
           // CALCULATE TOTAL TIME
           //   const totalEndTime = performance.now();
           //   const totalDuration = (
