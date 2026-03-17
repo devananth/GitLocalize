@@ -17,6 +17,8 @@ Open-source software powers the world, but it has a massive barrier to entry: **
 
 [![Watch the demo](https://img.youtube.com/vi/H2K9IT2te4s/0.jpg)](https://www.youtube.com/watch?v=H2K9IT2te4s)
 
+## Technical Blog: [GitLocalize blog post](https://dev.to/devananth/building-gitlocalize-how-an-obsession-with-reducing-friction-saved-2-minutes-of-load-time-175n)
+
 
 ## 🛠 Tech Stack
 * **Frontend (Extension):** JavaScript (Manifest V3), HTML/CSS, Chrome Storage API, `marked.js` (for Markdown-to-HTML rendering).
